@@ -74,7 +74,7 @@ class UserTasksController < ApplicationController
     end
 
     def all_tasks
-      @user_tasks = UserTask.all
+      @user_tasks = UserTask.order(:due)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
